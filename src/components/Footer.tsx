@@ -1,18 +1,44 @@
-import { Col, Container } from 'react-bootstrap';
+"use client";
+import "bootstrap/dist/css/bootstrap.min.css";
+import { Button, Col, Container, Image, Row } from "react-bootstrap";
+import { Facebook, Instagram, Linkedin, Twitter } from "react-bootstrap-icons";
 
-/** The Footer appears at the bottom of every page. Rendered by the App Layout component. */
 const Footer = () => (
-  <footer className="mt-auto py-3 bg-light">
+  <footer id="bottomMenu" className="footer mt-auto py-3 bg-dark">
     <Container>
-      <Col className="text-center">
-        Department of Information and Computer Sciences
-        <br />
-        University of Hawaii
-        <br />
-        Honolulu, HI 96822
-        <br />
-        <a href="http://ics-software-engineering.github.io/nextjs-application-template">Template Home Page</a>
-      </Col>
+      <Row>
+        <Col>
+          <Image src="/maui-cropped-Logo-1.png" alt="Maui Brewing Co. Logo" width={175} />
+        </Col>
+        <Col>
+          <h3>MAUI</h3>
+          <br />
+          KIHEI<br />
+          KA&apos;ANAPALI
+        </Col>
+        <Col>
+          <h3>OAHU</h3>
+          <br />
+          KILUA<br />
+          WAIKIKI
+        </Col>
+        <Col>
+          BREWERY
+          <br />
+          CONTACT US<br />
+          GIFT CARDS
+        </Col>
+        <Col>
+          NEWSLETTER
+          <br />
+          <input type="text" placeholder="Enter Email" />
+          <Button>SUBMIT</Button> <br />
+          <Facebook size={35} className="mx-2 my-2" />
+          <Twitter size={35} className="mx-2 my-2" />
+          <Instagram size={35} className="mx-2 my-2" />
+          <Linkedin size={35} className="mx-2 my-2" />
+        </Col>
+      </Row>
     </Container>
   </footer>
 );
